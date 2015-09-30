@@ -9,7 +9,7 @@
 
         private static void Main()
         {
-            int n = 5;
+            int n = int.Parse(Console.ReadLine());
             int[] arr = Enumerable.Range(1, n).ToArray();
             Permute(arr, 0);
             Console.WriteLine("Total permutations: " + numberOfPermutations);
@@ -30,7 +30,6 @@
                     array[i] = array[startIndex];
                     array[startIndex] = temp;
 
-                    //startIndex = i + 1;
                     Permute(array, startIndex + 1);
 
                     int tempSecond = array[i];
