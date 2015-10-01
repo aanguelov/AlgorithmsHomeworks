@@ -16,11 +16,11 @@
 
             while (i < n)
             {
+                int j = i % 2 != 0 ? controlArr[i] : 0;
+
                 if (controlArr[i] < i)
                 {
                     Console.WriteLine(string.Join(", ", arr));
-
-                    int j = i % 2 != 0 ? controlArr[i] : 0;
 
                     int temp = arr[j];
                     arr[j] = arr[i];
@@ -35,7 +35,7 @@
                 {
                     controlArr[i] = 0;
                     i++;
-                }
+                }                
             }
 
             Console.WriteLine(string.Join(", ", arr));
